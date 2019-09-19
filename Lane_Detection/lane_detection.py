@@ -1,8 +1,10 @@
-import pipeline
-import perspective_warp
-import inv_perspective_warp
-import sliding_window
-import get_hist
+from pipeline import pipeline
+from perspective_warp import perspective_warp
+from inv_perspective import inv_perspective_warp
+from sliding_window import sliding_window
+from get_hist import get_hist
+import time
+import cv2
 
 def lane_detection(img, size = (100,100)): 
   time_start = time.time()
@@ -19,6 +21,6 @@ def lane_detection(img, size = (100,100)):
   print("time_color_channel_conv = " + str(int((time_1-time_start)*1000)) + " pipeline_time = "\
         + str(int((time_2-time_1)*1000)) + " perspective_warp_time = " \
         + str(int((time_3-time_2)*1000)) + "sliding_window_time = " + str(int((time_4-time_3)*1000)))
-  print("Overall Time = " +str(int((time_end-time_start)*1000)))
+  print("Overall Time = " +str(int((time_4-time_start)*1000)))
               
   return curves, lanes, ploty, out_img

@@ -5,8 +5,6 @@ import os
 import glob
 import matplotlib.pyplot as plt
 import pickle
-
-%matplotlib inline
 import time
 
 def pipeline(img, s_thresh=(100, 255), sx_thresh=(15, 255)):

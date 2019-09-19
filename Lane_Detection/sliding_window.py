@@ -1,6 +1,6 @@
 import numpy as np
 import cv2
-import get_hist
+from get_hist import get_hist
 
 def sliding_window(img, nwindows=9, margin=20, minpix = 1, draw_windows=True):
     left_a, left_b, left_c = [],[],[]
