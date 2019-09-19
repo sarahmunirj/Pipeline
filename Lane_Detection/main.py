@@ -5,7 +5,7 @@ from lane_detection import draw_lanes, get_curve
 sys.path.append("/Lane_Detection")
 from lane_detection import lane_detection
 #, get_curve, draw_lanes
-
+import matplotlib.pyplot as plt
 img = cv2.imread('/home/hackathon/Curved-Lane-Lines/test_images/test3.jpg')
 #plt.imshow(img)
 size = (100,100)
