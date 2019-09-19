@@ -1,7 +1,8 @@
 import cv2
 import sys
 import os
-from lane_detection import draw_lanes, get_curve
+from draw_lanes import draw_lanes
+from get_curve import get_curve
 sys.path.append("/Lane_Detection")
 from lane_detection import lane_detection
 #, get_curve, draw_lanes
